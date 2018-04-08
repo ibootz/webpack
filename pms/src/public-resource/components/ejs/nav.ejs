@@ -1,0 +1,536 @@
+<!-- 开始 侧边栏 -->
+<div class="page-sidebar-wrapper">
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <div class="page-sidebar navbar-collapse collapse">
+        <!-- 开始 侧边主目录 -->
+        <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+        <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+        <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+        <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="200">
+            <li class="nav-item start active open">
+                <a href="<%= urlBuilder('home/home') %>" class="nav-link nav-toggle">
+                    <i class="icon-home"></i>
+                    <span class="title">主页</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">统计报表</h3>
+            </li>
+            <li class="nav-item  ">
+                <a href="<%= urlBuilder('static/order_static/order_static') %>" class="nav-link  ">
+                    <i class="icon-graph"></i>
+                    <span class="title">订单统计</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="<%= urlBuilder('static/product_static/product_static') %>" class="nav-link  ">
+                    <i class="icon-pie-chart"></i>
+                    <span class="title">产品统计</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="<%= urlBuilder('static/purchase_static/purchase_static') %>" class="nav-link  ">
+                    <i class="icon-support"></i>
+                    <span class="title">采购统计</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="<%= urlBuilder('static/logistic_static/logistic_static') %>" class="nav-link  ">
+                    <i class="icon-bar-chart"></i>
+                    <span class="title">物流统计</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="<%= urlBuilder('static/out_of_stock_static/out_of_stock_static') %>" class="nav-link  ">
+                    <i class="icon-pie-chart"></i>
+                    <span class="title">缺货统计</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="<%= urlBuilder('static/performance_static/performance_static') %>" class="nav-link  ">
+                    <i class="icon-speedometer"></i>
+                    <span class="title">绩效统计</span>
+                </a>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">业务管理</h3>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-plane"></i>
+                    <span class="title">发货</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('delivery/pending_orders') %>" class="nav-link ">
+                            <span class="title">待处理订单</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('delivery/delivery_orders') %>" class="nav-link ">
+                            <span class="title">待发货订单</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('delivery/cancel_orders') %>" class="nav-link ">
+                            <span class="title">待取消订单</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('delivery/delivery_logs') %>" class="nav-link ">
+                            <span class="title">发货日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-basket-loaded"></i>
+                    <span class="title">订单</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('order/custom_orders/custom_orders') %>" class="nav-link ">
+                            <span class="title">客户订单</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('order/out_of_stock_orders/out_of_stock_orders') %>" class="nav-link ">
+                            <span class="title">缺货订单</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('order/refunds/refunds') %>" class="nav-link ">
+                            <span class="title">退款管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('order/returns/returns') %>" class="nav-link ">
+                            <span class="title">退件管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-briefcase"></i>
+                    <span class="title">采购</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/purchase_requirements/purchase_requirements') %>" class="nav-link ">
+                            <span class="title">采购需求</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/out_of_stock_products/out_of_stock_products') %>" class="nav-link ">
+                            <span class="title">缺货产品</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/purchase_tasks/purchase_tasks') %>" class="nav-link ">
+                            <span class="title">采购单管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/suppliers/suppliers') %>" class="nav-link ">
+                            <span class="title">供应商管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/quality_inspections') %>" class="nav-link ">
+                            <span class="title">质检管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/weighings') %>" class="nav-link ">
+                            <span class="title">称重管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('purchase/purchase_logs') %>" class="nav-link ">
+                            <span class="title">采购日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-wallet"></i>
+                    <span class="title">产品</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('product/skus') %>" class="nav-link ">
+                            <span class="title">单品管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('product/sku_suits') %>" class="nav-link ">
+                            <span class="title">套装管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('product/categories') %>" class="nav-link ">
+                            <span class="title">类目管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('product/brands') %>" class="nav-link ">
+                            <span class="title">品牌管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('product/product_logs') %>" class="nav-link ">
+                            <span class="title">产品日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-social-dropbox"></i>
+                    <span class="title">物流</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('logistics/invoices') %>" class="nav-link ">
+                            <span class="title">发货单管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('logistics/inventories') %>" class="nav-link ">
+                            <span class="title">库存管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('logistics/warehouses') %>" class="nav-link ">
+                            <span class="title">仓库管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('logistics/logistics_logs') %>" class="nav-link ">
+                            <span class="title">物流日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-earphones-alt"></i>
+                    <span class="title">客服</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('customerservice/customers') %>" class="nav-link ">
+                            <span class="title">客户管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('customerservice/message_templates') %>" class="nav-link ">
+                            <span class="title">消息模板</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="javascript:void(0);" class="nav-link nav-toggle">
+                            <span class="title">平台CASE</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item ">
+                                <a href="<%= urlBuilder('customerservice/case/ebay_messages') %>" class="nav-link " > Ebay消息 </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<%= urlBuilder('customerservice/case/ebay_disputes') %>" class="nav-link " > Ebay争议 </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<%= urlBuilder('customerservice/case/ebay_comments') %>" class="nav-link " > Ebay评论 </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<%= urlBuilder('customerservice/case/amazon_comments') %>" class="nav-link " > Amazon评论 </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">平台管理</h3>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-layers"></i>
+                    <span class="title">Ebay</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/ebay/ebay_accounts') %>" class="nav-link ">
+                            <span class="title">账号管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/ebay/ebay_items') %>" class="nav-link ">
+                            <span class="title">帖子管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-feed"></i>
+                    <span class="title">Amazon</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/amazon/amazon_accounts') %>" class="nav-link ">
+                            <span class="title">账号管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-basket"></i>
+                    <span class="title">速卖通</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/smt_accounts') %>" class="nav-link ">
+                            <span class="title">账号管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-globe-alt"></i>
+                    <span class="title">Wish</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/wish_accounts') %>" class="nav-link ">
+                            <span class="title">账号管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-credit-card"></i>
+                    <span class="title">Paypal</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/paypal_accounts') %>" class="nav-link ">
+                            <span class="title">账号管理</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('salechannel/paypal_transactions') %>" class="nav-link ">
+                            <span class="title">交易管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">OA管理</h3>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-users"></i>
+                    <span class="title">部门</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('oa/departments') %>" class="nav-link ">
+                            <span class="title">部门管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('oa/works') %>" class="nav-link ">
+                            <span class="title">岗位管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-user"></i>
+                    <span class="title">员工</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('staff/staff') %>" class="nav-link ">
+                            <span class="title">员工管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('staff/roles') %>" class="nav-link ">
+                            <span class="title">角色管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('staff/assessments') %>" class="nav-link ">
+                            <span class="title">考核管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('staff/attendance') %>" class="nav-link ">
+                            <span class="title">考勤管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-notebook"></i>
+                    <span class="title">财务</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('finance/wage') %>" class="nav-link ">
+                            <span class="title">工资管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('finance/taxations') %>" class="nav-link ">
+                            <span class="title">税务管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('finance/reimbursements') %>" class="nav-link ">
+                            <span class="title">报销管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('finance/approvals') %>" class="nav-link ">
+                            <span class="title">审批管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-eyeglasses"></i>
+                    <span class="title">培训</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('training/training') %>" class="nav-link ">
+                            <span class="title">培训课程</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('training/exams') %>" class="nav-link ">
+                            <span class="title">培训考试</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">系统</h3>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-wrench"></i>
+                    <span class="title">实用工具</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/price_calculator') %>" class="nav-link ">
+                            <span class="title">价格试算</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/exchange_rate_conversion') %>" class="nav-link ">
+                            <span class="title">汇率换算</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/template_formatter') %>" class="nav-link ">
+                            <span class="title">模板格式化</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/qrcode_generator') %>" class="nav-link ">
+                            <span class="title">二维码生成</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/messages') %>" class="nav-link ">
+                            <span class="title">内部消息</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/calendar') %>" class="nav-link ">
+                            <span class="title">日历提醒</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('tools/todos') %>" class="nav-link ">
+                            <span class="title">待办事项</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-mouse"></i>
+                    <span class="title">访问管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="<%= urlBuilder('site/site_access') %>" class="nav-link ">
+                            <span class="title">访问记录</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link nav-toggle">
+                    <i class="icon-clock"></i>
+                    <span class="title">定时任务</span>
+                    <span class="arrow "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="<%= urlBuilder('task/taskes') %>" class="nav-link ">
+                           <span class="title">任务管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<%= urlBuilder('task/task_logs') %>" class="nav-link ">
+                            <span class="title">执行日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- 结束 侧边主目录 -->
+    </div>
+</div>
+<!-- 结束 侧边栏 -->

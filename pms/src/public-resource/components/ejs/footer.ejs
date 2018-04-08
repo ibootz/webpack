@@ -1,0 +1,45 @@
+<!-- 开始 页脚 -->
+    <div class="page-footer">
+        <div class="page-footer-inner"> 2017 &copy; momogoing@163.com</div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <!-- 结束 页脚 -->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.respond %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.excanvas %>"></script>
+    <![endif]-->
+
+    <!-- 开始 核心JS -->
+    <script type="text/javascript" src="<%= BUILD_FILE.js.jquery %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.bootstrap %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.jsCookies %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.bootstrap_hover_dropdown %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.jquery_slimscroll %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.jquery_blockui %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.bootstrap_switch %>"></script>
+    <!-- 结束 核心JS -->
+
+    <!-- 开始 页面插件JS -->
+    <% if (!!pageConfig && !!pageConfig.pluginsJs) { %><%= pageConfig.pluginsJs() %><% } %>
+    <!-- 结束 页面插件JS -->
+
+    <!-- 开始 主题全局JS -->
+    <script type="text/javascript" src="<%= BUILD_FILE.js.app %>"></script>
+    <!-- 结束 主题全局JS -->
+
+    <!-- 开始 主题布局JS -->
+    <script type="text/javascript" src="<%= BUILD_FILE.js.layout %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.demo %>"></script>
+    <script type="text/javascript" src="<%= BUILD_FILE.js.quick_sidebar %>"></script>
+    <!-- 结束 主题布局JS -->
+
+    <!-- 开始 当前页JS -->
+    <% if (!!pageConfig && !!pageConfig.pluginsJs) { %><%= pageConfig.customJs() %><% } %>
+    <!-- 结束 当前页JS -->
+
+</body>
+
+</html>

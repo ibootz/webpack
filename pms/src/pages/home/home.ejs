@@ -1,0 +1,270 @@
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <!-- 开始 PAGE HEAD-->
+        <div class="page-head">
+            <!-- 开始 PAGE TITLE -->
+            <div class="page-title">
+                <h1>主页
+                </h1>
+            </div>
+            <!-- 结束 PAGE TITLE -->
+
+            <!-- 开始 PAGE TOOLBAR -->
+            <!-- 日期时间选择插件 -->
+            <div class="page-toolbar">
+                <div id="dashboard-report-range" class="pull-right tooltips btn btn-fit-height green" data-placement="top" data-original-title="Change dashboard date range">
+                    <i class="icon-calendar"></i>&nbsp;
+                    <span class="thin uppercase hidden-xs"></span>&nbsp;
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+            <!-- 结束 PAGE TOOLBAR -->
+        </div>
+        <!-- 结束 PAGE HEAD-->
+
+        <!-- 开始 面包屑 -->
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <span>主页</span>
+                <i class="fa fa-circle"></i>
+            </li>
+        </ul>
+        <!-- 结束 面包屑 -->
+
+        <!-- 开始 页面主内容区 -->
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a class="dashboard-stat dashboard-stat-v2 blue" href="#">
+                    <div class="visual">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span data-counter="counterup" data-value="1349">1349</span>
+                        </div>
+                        <div class="desc"> 新评论 </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a class="dashboard-stat dashboard-stat-v2 red" href="#">
+                    <div class="visual">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span data-counter="counterup" data-value="4512.58">4512.58</span> 万元 </div>
+                        <div class="desc"> 总利润 </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a class="dashboard-stat dashboard-stat-v2 green" href="#">
+                    <div class="visual">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span data-counter="counterup" data-value="2549">2549</span>
+                        </div>
+                        <div class="desc"> 新订单 </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a class="dashboard-stat dashboard-stat-v2 purple" href="#">
+                    <div class="visual">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number"> +
+                            <span data-counter="counterup" data-value="59.67">59.67</span>% </div>
+                        <div class="desc"> 品牌欢迎度 </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <!-- 开始 PORTLET-->
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-bar-chart font-dark hide"></i>
+                            <span class="caption-subject font-dark bold uppercase">销售额</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div id="sales_statistics_loading">
+                            <img src="<%= pageConfig.images.loading_gif  %>" alt="loading" /> </div>
+                        <div id="sales_statistics_content" class="display-none">
+                            <div id="sales_statistics" class="chart"> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 结束 PORTLET-->
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <!-- 开始 PORTLET-->
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-share font-red-sunglo hide"></i>
+                            <span class="caption-subject font-dark bold uppercase">净利润</span>
+                        </div>
+                        <div class="actions">
+                            <div class="btn-group">
+                                <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> 过滤查询
+                                    <span class="fa fa-angle-down"> </span>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:void(0);"> Q1 2017
+                                            <span class="label label-sm label-default"> 过去 </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"> Q2 2017
+                                            <span class="label label-sm label-default"> 过去 </span>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);"> Q3 2017
+                                            <span class="label label-sm label-success"> 当前 </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"> Q4 2017
+                                            <span class="label label-sm label-warning"> 预期 </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div id="profit_statistics_loading">
+                            <img src="<%= pageConfig.images.loading_gif  %>" alt="loading" /> </div>
+                        <div id="profit_statistics_content" class="display-none">
+                            <div id="profit_statistics" style="height: 228px;"> </div>
+                        </div>
+                        <div style="margin: 20px 0 10px 30px">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-success"> 收入: </span>
+                                    <h3>¥1,323,498,870</h3>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-info"> 税费: </span>
+                                    <h3>¥3,499,000</h3>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-danger"> 运费: </span>
+                                    <h3>¥3,134,990</h3>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-warning"> 订单: </span>
+                                    <h3>235090</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 结束 PORTLET-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <!-- 开始 PORTLET-->
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-bar-chart font-dark hide"></i>
+                            <span class="caption-subject font-dark bold uppercase">订单量</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div id="order_statistics_loading">
+                            <img src="<%= pageConfig.images.loading_gif  %>" alt="loading" /> </div>
+                        <div id="order_statistics_content" class="display-none">
+                            <div id="order_statistics" class="chart"> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 结束 PORTLET-->
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <!-- 开始 PORTLET-->
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-share font-red-sunglo hide"></i>
+                            <span class="caption-subject font-dark bold uppercase">缺货量</span>
+                        </div>
+                        <div class="actions">
+                            <div class="btn-group">
+                                <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> 过滤查询
+                                    <span class="fa fa-angle-down"> </span>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:void(0);"> Q1 2017
+                                            <span class="label label-sm label-default"> 过去 </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"> Q2 2017
+                                            <span class="label label-sm label-default"> 过去 </span>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);"> Q3 2017
+                                            <span class="label label-sm label-success"> 当前 </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"> Q4 2017
+                                            <span class="label label-sm label-warning"> 预期 </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div id="outstock_statistics_loading">
+                            <img src="<%= pageConfig.images.loading_gif  %>" alt="loading" /> </div>
+                        <div id="outstock_statistics_content" class="display-none">
+                            <div id="outstock_statistics" style="height: 228px;"> </div>
+                        </div>
+                        <div style="margin: 20px 0 10px 30px">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-success"> 收入: </span>
+                                    <h3>¥1,323,498,870</h3>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-info"> 税费: </span>
+                                    <h3>¥3,499,000</h3>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-danger"> 运费: </span>
+                                    <h3>¥3,134,990</h3>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                                    <span class="label label-sm label-warning"> 订单: </span>
+                                    <h3>235090</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 结束 PORTLET-->
+            </div>
+        </div>
+        <!-- 结束 页面主内容区 -->
+    </div>
+</div>

@@ -1,0 +1,13 @@
+/*这是一份覆盖样式，用来覆盖模板UI中不满足系统自定义的样式*/
+
+/* 表格内容上下居中显示 */
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* Logo样式 */
+.page-header.navbar .page-logo .logo-default {
+    margin: 18px 10px 0 10px;
+    width: 99px;
+    height: 40px;
+}

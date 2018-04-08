@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh-cmn-Hans" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="zh-cmn-Hans" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-cmn-Hans">
+<!--<![endif]-->
+
+<!-- 开始 头部 -->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><% if (pageTitle) { %><%= pageTitle %><% } else {PMS - 业务管理系统} %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta content="PMS 业务管理系统" name="description"/>
+    <meta content="Zhangq" name="author"/>
+
+    <!-- 开始 全局样式 -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="<%= BUILD_FILE.css.font_awesome %>" rel="stylesheet" type="text/css"/>
+    <link href="<%= BUILD_FILE.css.simple_line_icons %>" rel="stylesheet" type="text/css"/>
+    <link href="<%= BUILD_FILE.css.bootstrap %>" rel="stylesheet" type="text/css"/>
+    <link href="<%= BUILD_FILE.css.bootstrap_switch %>" rel="stylesheet" type="text/css"/>
+    <!-- 结束 全局样式 -->
+
+    <!-- 开始 页面插件样式 -->
+    <% if (!!pageConfig && !!pageConfig.pluginsCss) { %><%= pageConfig.pluginsCss() %><% } %>
+    <!-- 结束 页面插件样式 -->
+
+    <!-- 开始 主题全局样式 -->
+    <link href="<%= BUILD_FILE.css.components_rounded %>" rel="stylesheet" type="text/css"/>
+    <link href="<%= BUILD_FILE.css.plugins %>" rel="stylesheet" type="text/css"/>
+    <!-- 结束 主题全局样式 -->
+
+    <!-- 开始 主题布局样式 -->
+    <link href="<%= BUILD_FILE.css.layout %>" rel="stylesheet" type="text/css"/>
+    <link href="<%= BUILD_FILE.css.light %>" rel="stylesheet" type="text/css"/>
+    <!-- 结束 主题布局样式 -->
+
+    <!-- 开始 全局自定义样式 -->
+    <link href="<%= BUILD_FILE.css.custom %>" rel="stylesheet" type="text/css"/>
+    <!-- 结束 全局自定义样式 -->
+
+    <link rel="shortcut icon" href="<%= BUILD_FILE.images.favicon %>"/>
+
+    <!-- 兼容IE10版本以下浏览器 -->
+    <!--[if lt IE 9]>
+    <link href="<%= BUILD_FILE.css.mapplic_ie %>" rel="stylesheet" type="text/css" />
+    <script src="<%= BUILD_FILE.js.html5shiv %>" type="text/javascript"></script>
+    <![endif]-->
+
+</head>
+<!-- 结束 头部 -->
+
+<!-- 开始 主内容区 -->
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
